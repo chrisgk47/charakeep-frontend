@@ -1,0 +1,235 @@
+/* * {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  } */
+
+  html { 
+    background: url("assets/images/dndlogo.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
+  
+  body {
+    padding: 1rem;
+    position: bottom;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  header {
+    padding: 0.5rem;
+    width: 100%;
+    color: black;
+    /* background-color: transparent; */
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  }
+  
+  .container {
+    margin-top:10px;
+    align-items: center;
+    text-align: center;
+    /* opacity: 0.7; */
+  }
+  
+
+  #char-menu {
+    display: flex;
+    overflow-x: auto;
+    margin: 0.5rem 0;
+    max-width: calc(100vw - 2rem);
+    /* opacity: 0.7; */
+    background-color: transparent;
+    text-align: center;
+    /* object-position: 100px 2000px; */
+  }
+  
+  #char-menu img {
+    flex: 0 1 auto;
+    height: 175px;
+    width: 150px;
+    margin-right: 1rem;
+    justify-content: center;
+    cursor: pointer;
+    position: center;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #char-menu img:last-child {
+    left: 10px;
+  }
+  
+  /* #char-detail {
+    position: relative;
+    height: 500px;
+    width: 530px;
+    box-shadow: 0 0 5px #979AA4;
+    border: 5px solid #d4d0ce;
+    padding: 30px;
+    margin: 50px 10;
+    font-family: "Scala Sans Offc",Roboto,Helvetica,sans-serif;
+    font-size: 15px;
+  } */
+  .char-detail {
+    display: inline-block;
+    /* float: right; */
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  .char-card-inner {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: transparent;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .char-detail:hover .char-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .characters, .char-card-back {
+    position: absolute;
+    width: fit-content;
+    block-size: fit-content;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .characters {
+    background-color: transparent;
+    color: black;
+  }
+
+  .char-card-back {
+    background-color: transparent;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    overflow-wrap: anywhere;
+    color: white;
+    transform: rotateY(180deg);
+}
+  
+
+  /* div.characters {
+    position: center;
+    border: 50px red;
+    height: 150px;
+    width: 300px;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    text-align: center;
+  } */
+  
+  .detail-image {
+    /* float: left; */
+    height: 250px;
+    width: 230px;
+    
+  }
+
+  
+  
+  .description {
+    /* position: center; */
+    /* text-overflow: ellipsis; */
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    width:500px;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    text-overflow: ellipse;
+    padding: 0px;
+    margin
+    
+  }
+ p {
+  display: block;
+  margin: auto;
+  text-align: left;
+  padding: 10px; */
+ }
+  
+  button {
+    position: flex;
+    background-color: #A9A9A9;
+    opacity: 0.7;
+    border: black;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    font-size: 18px;
+    justify-self: center;
+    left: 50px;
+    bottom: -20px;
+  }
+
+  /* .form-container {
+    float: left;
+    position: absolute;
+    left: 100px;
+  } */
+
+  form {
+    display: inline-block;
+    margin: 5rem 0;
+    width: 300px;
+    flex-direction: column;
+    text-align: center;
+    float: center;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    left: 50px;
+    margin-bottom: 0px;
+    font-size: 25px;
+  }
+  
+  input,
+  textarea {
+    font-size: 1rem;
+    border: 1px solid black;
+    background-color: white;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  input[type="submit"]:active {
+    background-color: gray;
+  }
+  .select{
+    font-size: 34px;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  }
+
+  
+  
+
+  
+ 
+  

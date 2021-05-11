@@ -6,162 +6,101 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/index.css">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="./src/index.js" ></script>
+        
+        <script>
+            function hideForm() {
+                let x = document.getElementById("new-character");
+                if (x.style.display === "none") {
+                x.style.display = "block";
+                } else {
+                x.style.display = "none";
+                }
+            }
+            </script>
+        <div id=form-container>
+            <button onclick="hideForm()">Click to Show/Hide New Character Form</button>
+            <form id="new-character" style="display:none;">
+                <h4>Create a New D&D Character</h4>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="new-name" />
+                <label for="race">Race:</label>
+                    <select name="race" id="new-race" form="raceform">
+                        <option id="dragon" value="Dragonborn">Dragonborn</option>
+                        <option id="dwarf" value="Dwarf">Dwarf</option>
+                        <option id="elf" value="Elf">Elf</option>
+                        <option id="gnome" value="Gnome">Gnome</option>
+                        <option id="halfelf" value="Half-Elf">Half-Elf</option>
+                        <option id="halfling"value="Halfling">Dwarf</option>
+                        <option id="halforcvalue="Half-Orc">Half-Orc</option>
+                        <option id="human" value="Human">Human</option>
+                        <option id="tief" value="Tiefling">Tiefling</option>
+                        <option id="orc" value="Orc">Orc</option>
+                    </select>
+                <label for="charclass">Class:</label>
+                    <select name="charclass" id=new-class" form="classform">
+                        <option value="Cleric">Cleric</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Wizard">Wizard</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Warrior">Warrior</option>
+                    </select>
+                <label for="image">Image: </label>
+                <input type="text" name="image" id="new-image" />
+                <label for="description">Description: </label>
+                <input type="text" name="description" id="new-description" />
+                <label for="agility">AGI:</label>
+                <input type="number" min="0" max="20" value="1">
+                <label for="charisma">CHA:</label>
+                <input type="number" min="0" max="20" value="1">
+                <label for="dexterity">DEX:</label>
+                <input type="number" min="0" max="20" value="1">
+                <input type="submit" value="Create"/>
+            </form>
+        </div>
+    </div>  
     </head>
     <body>
-
-       <div id = "titlelog">
-            <h1> CharaKeep</h1>
-            <form id = "login" action = "">
-                <input type='text' name="login" id="usern" cols="30" rows="10" placeholder="Username">
-                </br>
-                <button id='logbtn'>Login</button>
-           </form>  
-           
-       </div>
-       
-       <div id = "actions">
-            <button id = "add"> Add </button>
-            <button id = "edit"> Edit </button>
-            <button id = "delete"> Delete </button>
-       </div>
-   
-       <div id = "deets">
-            <div>
-                <img id = "profile" src = ""
-                alt="character profile picture"> 
-            </div> 
-            <div id = "basics">
-                <div id="cname">
-                    <p>
-                       Name 
-                    </p> 
-                </div>
-                <div id = "rname">
-                    <p> 
-                        Race
-                    </p>
-                </div>             
-                <div id = "clname">
-                    <p>
-                        Class
-                    </p>
-                </div>
-                <div id = "clvl">
-                    <p> 
-                    Level
-                    </p>
+        <header>
+            <h1>"Themed Character Manager"</h1>
+            
+            <div class=container>
+                <div id=char-menu style="right: 500px;">
+                    
                 </div>
             </div>
-
-            <div id = "stats">
-                <div>
-                    <p>AGI:</p><p id = "agi">0</p>
-                </div>  
-                <div>
-                    <p>CHA:</p><p id = "cha">0</p>
-                </div>
-                <div>
-                    <p>DEX:</p><p id = "dex">0</p>
-                </div>
-                <div>
-                    <p>INT:</p><p id = "int">0</p>
-                </div>
-                <div>
-                    <p>STR:</p><p id = "str">0</p>
-                </div>
-                <div>
-                    <p>WIS:</p><p id = "wis">0</p>
-                </div>  
-            </div>
-
-            <div id = "dice">
-                <div id = "col1">
-                    <div>
-                        <p>D4 x</p> 
-                            <form id = "d4roller" action = "">
-                            <input type="number" id = "d4rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d4eq"> = </button>
-                       <br><p>0</p>
-                    </div>
-                    <div>
-                        <p>D6 x</p>
-                        <form id = "d6roller" action = "">
-                            <input type="number" id = "d6rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d6eq"> = </button>
-                        <br><p>0</p>
-                    </div>
-                    <div>
-                        <p>D8 x</p>
-                        <form id = "d8roller" action = "">
-                            <input type="number" id = "d8rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d8eq"> = </button>
-                        <br><p>0</p>
-                    </div>  
-                    <div>
-                        <p>D10 x</p>
-                        <form id = "d10roller" action = "">
-                            <input type="number" id = "d10rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d10eq"> = </button>
-                        <br><p>0</p>
-                    </div>
-                </div>
-                <div id ="col2">
-                    <div>
-                        <p>D12 x</p>
-                        <form id = "d12roller" action = "">
-                            <input type="number" id = "d12rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d12eq"> = </button>
-                        <br><p>0</p>
-                    </div>
-                    <div>
-                        <p>D20 x</p>
-                        <form id = "d20roller" action = "">
-                            <input type="number" id = "d20rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d20eq"> = </button>
-                        <br><p>0</p>
-                    </div>
-                    <div>
-                        <p>D00 x</p>
-                        <form id = "d00roller" action = "">
-                            <input type="number" id = "d00rolln" min = "0" max = "100"> 
-                            </form> 
-                       <button id = "d00eq"> = </button>    
-                        <br><p>0</p>
-                    </div>  
-                </div>
-            </div> 
-       </div>
-
-       <div id = "legend">
-           <div id = "histtab">
-                <h4>History</h4>
-                    <p>Lorem ipsum </p>
-            </div>
-
-           <div id = "achievetab">
-               <h4> Achievements</h4>
-               <br>
-
-               <ul id = "achul">
-               </ul>
-
-               <form id = "addachform" action = "">
-                    <input type='text' name="achieve" id="achieve" cols="30" rows="10">
-                    </br>
-                    <button id='addach'>Add</button>
-               </form>  
-           </div>
-       </div>
-
-   
+        </header>
         
-        <script src="./src/index.js" defer></script>
+        <div class="outer-div">
+            <div class="char-detail">
+                <div class="char-card-inner">
+                    <div class="characters">
+                        <img class="detail-image" src="" style="width:300px;height:300px;">
+                        <h2 class="name"></h2>
+                        <h3 class="race"></h3>
+                        <h3 class="class"></h3>
+                    </div>
+                    <div class="char-card-back">
+                        <h3 class="description">
+                            
+                        </h3>
+                        <div id = "stats">
+                            <h3><u>Stats</u></h3>
+                            <h4 id="agi"></h4>
+                            <h4 id="cha"></h4>
+                            <h4 id="dex"></h4>
+                        <div>
+                </div>
+                </div>
+            </div>
+                
+            
+        
     </body>
+    
 </html>

@@ -1,0 +1,150 @@
+{
+    "characters": [
+      {
+        "id": 1,
+        "name": "Freyja Rubymaul",
+        "race": "Dwarf",
+        "class": "Paladin",
+        "image": "assets/images/freyjarm.jpg",
+        "description": "Wisdom is knowing that tomato is not a fruit",
+        "stats": {
+                "agility": 11,
+                "charisma": 14,
+                "dexterity": 10
+        }
+      },
+
+      {
+        "id": 2,
+        "name": "Xemaraia",
+        "race": "Tiefling",
+        "class": "Bard",
+        "image": "assets/images/xemaraia.jpg",
+        "description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling.",
+        "stats": {
+                "agility": 9,
+                "charisma": 12,
+                "dexterity": 15
+        }
+      },
+
+      {
+        "id": 3,
+        "name": "Lujor Ravenblossom",
+        "race": "Elf",
+        "class": "Warlock",
+        "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/476eace3-1954-4649-9b90-e9eb14fdb5c8/dd8trqa-93c0bfab-6b67-4383-bc7a-5cadf18d9554.png/v1/fill/w_900,h_1242,q_80,strp/elf_wizard_dnd_by_syoshiko_dd8trqa-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI0MiIsInBhdGgiOiJcL2ZcLzQ3NmVhY2UzLTE5NTQtNDY0OS05YjkwLWU5ZWIxNGZkYjVjOFwvZGQ4dHJxYS05M2MwYmZhYi02YjY3LTQzODMtYmM3YS01Y2FkZjE4ZDk1NTQucG5nIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.JRJh5Osd14u4P3h_Cphm2Q08gPuDJ1wlcCAHt1WQvEM",
+        "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it.",
+        "stats": {
+                "agility": 11,
+                "charisma": 13,
+                "dexterity": 17
+        }
+      },
+
+      {
+        "id": 4,
+        "name": "Jhorass",
+        "race": "Lizard Folk",
+        "class": "Barbarian",
+        "image": "http://i.neoseeker.com/mgv/467547-emperor_ren/547/2/blackscale_lizardfolk_display.jpg",
+        "description": "Lizardfolk are primitive reptilian humanoids that lurk in swamps and jungles. Fiercely territorial, they kill when it is expedient and do whatever it takes to survive.",
+        "stats": {
+                "agility": 10,
+                "charisma": 7,
+                "dexterity": 7
+        }
+      },
+
+      {
+        "id": 5,
+        "name": "Shag Ankle Burster",
+        "race": "Orc",
+        "class": "Barbarian",
+        "image": "https://qph.fs.quoracdn.net/main-qimg-44d88ea35fecae40316dc544372c5619",
+        "description": "Orcs are savage humanoids with stooped postures, piggish faces, and prominent teeth that resemble tusks. They gather in tribes that satisfy their bloodlust by slaying any humanoids that stand against them.",
+        "stats": {
+                "agility": 14,
+                "charisma": 10,
+                "dexterity": 12
+        }
+      }
+    ],
+    "achievements": [
+      {
+        "id": 1,
+        "imageId": 1,
+        "content": "DragonSeeker"
+      },
+      {
+        "id": 2,
+        "imageId": 1,
+        "content": "Saved a Town!"
+      },
+      {
+        "id": 3,
+        "imageId": 1,
+        "content": "Beer Drinking Contest Champion"
+      },
+      {
+        "id": 4,
+        "imageId": 2,
+        "content": "Set Town on Fire"
+      },
+      {
+        "id": 5,
+        "imageId": 2,
+        "content": "Aquired Bear Cub"
+      },
+      {
+        "id": 6,
+        "imageId": 2,
+        "content": "Stole a total of 2000 gold"
+      },
+      {
+        "id": 7,
+        "imageId": 3,
+        "content": "Said 'huh?' 1000 times"
+      },
+      {
+        "id": 8,
+        "imageId": 3,
+        "content": "Clobbered 500 heads"
+      },
+      {
+        "id": 9,
+        "imageId": 3,
+        "content": "Good Doggy"
+      },
+      {
+        "id": 10,
+        "imageId": 4,
+        "content": "Shed Skin"
+      },
+      {
+        "id": 11,
+        "imageId": 4,
+        "content": "Poison Resist"
+      },
+      {
+        "id": 12,
+        "imageId": 4,
+        "content": "Scale Upgrade"
+      },
+      {
+        "id": 13,
+        "imageId": 5,
+        "content": "Clan Chief"
+      },
+      {
+        "id": 14,
+        "imageId": 5,
+        "content": "Berserker"
+      },
+      {
+        "id": 15,
+        "imageId": 5,
+        "content": "Bloodlust"
+      } 
+    ]
+  }
