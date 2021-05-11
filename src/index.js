@@ -19,9 +19,10 @@ const descP = document.createElement("p")
 
 
 const newCharForm = document.getElementById("new-character")
-
 const charDb = "http://localhost:3000/characters"
 const achvDb = "http://localhost:3000/achievements"
+
+const newChar = {}
 
 //form hide and seek and post--working
 newBtn.addEventListener('click', () => {
@@ -49,13 +50,13 @@ newBtn.addEventListener('click', () => {
 
       }
     }
-    //call post function -- technically working (see function definition)
+    //call post function -- adds new char instance but not fully functioning
     postChar(newChar)
   })
 })
 
 //define post function
-//what is currently happening with post: adds a new character instance to db, but does not load input
+//what is currently happening with post: does not add to db, loads first card instead of input data
 const postChar = () => {
   fetch('http://localhost:3000/characters', {
         method: 'POST',
@@ -69,7 +70,7 @@ const postChar = () => {
       .then(charObj => {
         menuList(charObj)
 
-        newCharForm.reset()
+        // newCharForm.reset() removed temp as for some reason prevents new instance from being added
       })
 
 }
@@ -109,6 +110,8 @@ function firstCard(charArray){
   charP.textContent = `CHA: ${charArray[0].stats.charisma}`
   dextP.textContent = `DEX: ${charArray[0].stats.dexterity}`
 }
+
+// const charCard(charArray)
 
 //listen for click on menu and load char -- working
 charMenu.addEventListener('click', event => {
