@@ -1,11 +1,12 @@
-/* * {
+* {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding:0;
     box-sizing: border-box;
-  } */
+  }
+  
 
   html { 
-    background: url("assets/images/dndlogo.jpg") no-repeat center center fixed; 
+    background: url("assets/images/scroll.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,6 +33,15 @@
     /* background-color: transparent; */
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
   }
+
+  video {
+    width: 20%;
+    height: 20%;
+    opacity: 0.5;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+  }
   
   .container {
     margin-top:10px;
@@ -46,16 +56,16 @@
     overflow-x: auto;
     margin: 0.5rem 0;
     max-width: calc(100vw - 2rem);
-    /* opacity: 0.7; */
+    opacity: 0.7;
     background-color: transparent;
     text-align: center;
-    /* object-position: 100px 2000px; */
+    object-position: 100px 2000px;
   }
   
   #char-menu img {
     flex: 0 1 auto;
-    height: 175px;
-    width: 150px;
+    height: 250px;
+    width: 225px;
     margin-right: 1rem;
     justify-content: center;
     cursor: pointer;
@@ -69,17 +79,6 @@
     left: 10px;
   }
   
-  /* #char-detail {
-    position: relative;
-    height: 500px;
-    width: 530px;
-    box-shadow: 0 0 5px #979AA4;
-    border: 5px solid #d4d0ce;
-    padding: 30px;
-    margin: 50px 10;
-    font-family: "Scala Sans Offc",Roboto,Helvetica,sans-serif;
-    font-size: 15px;
-  } */
   .char-detail {
     display: inline-block;
     /* float: right; */
@@ -87,6 +86,7 @@
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    opacity: .8;
   }
   .char-card-inner {
     position: absolute;
@@ -159,12 +159,17 @@
     margin
     
   }
- p {
-  display: block;
-  margin: auto;
-  text-align: left;
-  padding: 10px; */
- }
+
+  p {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: -5px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+ 
   
   button {
     position: flex;
@@ -227,8 +232,14 @@
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
   }
 
+  #audio {
+    opacity: .2;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+  }
   
-  
+
 
   
  

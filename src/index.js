@@ -16,6 +16,8 @@ const charP = document.getElementById("cha")
 const dextP = document.getElementById("dex")
 const descP = document.createElement("p")
 
+const achH3 = document.querySelector("h3.achievements")
+
 newBtn.addEventListener('click', () => {
   addChar = !addChar;
   if (addChar) {
@@ -24,37 +26,37 @@ newBtn.addEventListener('click', () => {
   } else {
     contDiv.style.display = "none";
   }
-newCharForm.addEventListener('submit', eve=> {
-  eve.preventDefault()
+  newCharForm.addEventListener('submit', eve=> {
+    eve.preventDefault()
 
-  let newChar = {
-    id: '',
-    name: eve.target.name.value,
-    race: eve.target.selectedIndex,
-    class: eve.target.selectedIndex,
-    image: eve.target.image.value,
-    description: eve.target.description.value,
-    stats: {
+    let newChar = {
+      id: '',
+      name: eve.target.name.value,
+      race: eve.target.selectedIndex,
+      class: eve.target.selectedIndex,
+      image: eve.target.image.value,
+      description: eve.target.description.value,
+      stats: {
 
+      }
     }
-  }
 
-  fetch('http://localhost:3000/characters', {
-      method: 'POST',
-      headers: {
-          'content-type': 'application/json',
-          'accept': 'application/json'
-      },
-      body: JSON.stringify(newChar)
-  })
-    .then(res => res.json())
-    .then(charObj => {
-      menuList(charObj)
-
-      commForm.reset()
+    fetch('http://localhost:3000/characters', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            'accept': 'application/json'
+        },
+        body: JSON.stringify(newChar)
     })
+      .then(res => res.json())
+      .then(charObj => {
+        menuList(charObj)
 
-})
+        commForm.reset()
+      })
+
+  })
   
 })
 
@@ -76,10 +78,12 @@ function menuList(charObj){
 }
 
 function firstCard(charArray){
-  detImg.src = charArray[0].image
-  h2Name.textContent = `Name: ${charArray[0].name}`
-  h3Race.textContent = `Race: ${charArray[0].race}`
-  h3Class.textContent = `Class: ${charArray[0].class}`
+  let firstC = charArray[0]
+  detImg.src = firstC.image
+  h2Name.textContent = firstC.name
+  h3Race.textContent = `Race: ${firstC.race}`
+  h3Class.textContent = `Class: ${firstC.class}`
+
   descP.textContent = ""
   descP.textContent = `${charArray[0].description}`
   hDesc.append(descP)
@@ -91,10 +95,17 @@ function firstCard(charArray){
   charP.textContent = `CHA: ${charArray[0].stats.charisma}`
   dextP.textContent = `DEX: ${charArray[0].stats.dexterity}`
 
-  
+  achH3.innerHTML = ""
 
-
-
+  fetch("http://localhost:3000/achievements")
+    .then(res => res.json())
+    .then(achArr => achArr.forEach(achObj => {
+      if(achObj.imageId === firstC.id){
+        let achP = document.createElement('p')
+        achP.textContent = achObj.content
+        achH3.append(achP)
+      }
+    }))
 }
 
 charMenu.addEventListener('click', event => {
@@ -121,6 +132,18 @@ function detailCard(menuObj){
   h2Name.textContent = menuObj.name
   h3Race.textContent = `Race: ${menuObj.race}`
   h3Class.textContent = `Class: ${menuObj.class}`
+
+  achH3.innerHTML = ""
+
+  fetch("http://localhost:3000/achievements")
+    .then(res => res.json())
+    .then(achArr => achArr.forEach(achObj => {
+      if(achObj.imageId === menuObj.id){
+        let achP = document.createElement('p')
+        achP.textContent = achObj.content
+        achH3.append(achP)
+      }
+    }))
   descP.textContent = ''
   descP.textContent = menuObj.description
   hDesc.innerHTML = ''
