@@ -33,15 +33,6 @@
     /* background-color: transparent; */
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
   }
-
-  video {
-    width: 20%;
-    height: 20%;
-    opacity: 0.5;
-    position: absolute;
-    left: 10px;
-    bottom: 20px;
-  }
   
   .container {
     margin-top:10px;
@@ -125,17 +116,7 @@
     overflow-wrap: anywhere;
     color: white;
     transform: rotateY(180deg);
-}
-  
-
-  /* div.characters {
-    position: center;
-    border: 50px red;
-    height: 150px;
-    width: 300px;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    text-align: center;
-  } */
+  }
   
   .detail-image {
     /* float: left; */
@@ -143,8 +124,6 @@
     width: 230px;
     
   }
-
-  
   
   .description {
     /* position: center; */
@@ -156,8 +135,6 @@
     text-align: center;
     text-overflow: ellipse;
     padding: 0px;
-    margin
-    
   }
 
   p {
@@ -186,18 +163,13 @@
     bottom: -20px;
   }
 
-  /* .form-container {
-    float: left;
-    position: absolute;
-    left: 100px;
-  } */
-
   form {
     display: inline-block;
     margin: 5rem 0;
     width: 300px;
     flex-direction: column;
     text-align: center;
+    opacity: 0.2px;
     float: center;
     color: white;
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
@@ -236,11 +208,28 @@
     opacity: .2;
     position: absolute;
     left: 10px;
-    top: 0px;
+    bottom: -10px;
+    width: 20%;
   }
   
+  #new-character{
+    opacity: 0.5px;
+  }
 
-
+  video {
+    width: 20%;
+    height: 20%;
+    opacity: 0.6;
+    position: absolute;
+    left: 0px;
+    right: 10px;
+    margin: 10px;
+    bottom: 35px;
+  }
   
+  u {
+    font-size: 25px;
+    position: center;
+  }
  
   

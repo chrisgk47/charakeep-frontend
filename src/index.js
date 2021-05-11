@@ -26,18 +26,21 @@ newBtn.addEventListener('click', () => {
   } else {
     contDiv.style.display = "none";
   }
+
   newCharForm.addEventListener('submit', eve=> {
     eve.preventDefault()
 
     let newChar = {
       id: '',
       name: eve.target.name.value,
-      race: eve.target.selectedIndex,
-      class: eve.target.selectedIndex,
+      race: eve.target.selectedIndex.value,
+      class: eve.target.selectedIndex.value,
       image: eve.target.image.value,
       description: eve.target.description.value,
       stats: {
-
+          agility: eve.target.selectedIndex.value,
+          charisma: eve.target.selectedIndex.value,
+          dexterity: eve.target.selectedIndex.value
       }
     }
 
@@ -50,11 +53,7 @@ newBtn.addEventListener('click', () => {
         body: JSON.stringify(newChar)
     })
       .then(res => res.json())
-      .then(charObj => {
-        menuList(charObj)
-
-        commForm.reset()
-      })
+      .then(console.log)
 
   })
   

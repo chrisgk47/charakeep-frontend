@@ -8,19 +8,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script defer src="./src/index.js" ></script>
-        <video id="myVid" controls autoplay>
+
+        <link rel="icon" href="data:,">
+        <video defer id="myVid" autoplay>
             <source src="assets/images/logovid.mp4">
         </video>
-        <audio src="assets/images/wizard.mp3" id="audio" loop="loop" controls></audio>
+
+        <audio src="assets/images/wizard.mp3" id="audio" allow="autoplay" loop="loop" controls></audio>
         <script>
+            
             setTimeout (function() {
-                setTimeout (function() {
-                    let myAudio = document.getElementById("audio")
-                    myAudio.volume = 0.4;
-                    myAudio.play();
-                    console.log('audio started');
-                }, 5000)
-            })
+                let myAudio = document.getElementById("audio")
+                myAudio.volume = 0.4;
+                myAudio.play();
+                console.log('audio started');
+            }, 5000)
+            
         </script>
         <script>
             function hideForm() {
