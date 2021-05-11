@@ -35,7 +35,7 @@ newBtn.addEventListener('click', () => {
     contDiv.style.display = "none";
   }
   
-  //submit form listener -- not sure if working
+  //submit form listener -- working
   newCharForm.addEventListener('submit', eve=> {
     eve.preventDefault()
 
@@ -72,7 +72,6 @@ const postChar = () => {
 
         // newCharForm.reset() removed temp as for some reason prevents new instance from being added
       })
-
 }
 //fetch chars -- working
 fetch('http://localhost:3000/characters')
@@ -111,18 +110,17 @@ function firstCard(charArray){
   dextP.textContent = `DEX: ${charArray[0].stats.dexterity}`
 }
 
-// const charCard(charArray)
 
-//listen for click on menu and load char -- working
+
+//listen for click on menu obj and load char -- working
 charMenu.addEventListener('click', event => {
-
     fetch(`http://localhost:3000/characters/${event.target.dataset.id}`)
     .then(res => res.json())
     .then(menuObj => detailCard(menuObj))
   }
 )
 
-//define details for char loaded -- working
+//define details for char loaded -- working for predefined chars but not for newly added
 function detailCard(menuObj){
 
   detImg.src = menuObj.image
@@ -144,4 +142,12 @@ function detailCard(menuObj){
  
 }
 
+
+
+//TO DO: 
+  //>problem with post could stem from
+    //-menuObj in detailCard? would charObj get our detail? would still want detailCard as a function for menu
+      //-create another that takes charObj as an argument?
+  //edit/patch function --will require slight addition to css/html
+  //delete function -- will require slight addition to css/html
 

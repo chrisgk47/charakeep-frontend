@@ -8,7 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script defer src="./src/index.js" ></script>
-        
+
+        <link rel="icon" href="data:,">
+        <video defer id="myVid" autoplay>
+            <source src="assets/images/logovid.mp4">
+        </video>
+
+        <audio src="assets/images/wizard.mp3" id="audio" allow="autoplay" loop="loop" controls></audio>
+        <script>
+            
+            setTimeout (function() {
+                let myAudio = document.getElementById("audio")
+                myAudio.volume = 0.4;
+                myAudio.play();
+                console.log('audio started');
+            }, 5000)
+            
+        </script>
         <script>
             function hideForm() {
                 let x = document.getElementById("new-character");
@@ -67,7 +83,7 @@
     </head>
     <body>
         <header>
-            <h1>"Themed Character Manager"</h1>
+            <h1>⟐Themed Character Manager⟐</h1>
             
             <div class=container>
                 <div id=char-menu style="right: 500px;">
@@ -84,6 +100,10 @@
                         <h2 class="name"></h2>
                         <h3 class="race"></h3>
                         <h3 class="class"></h3>
+                            <u>⟐Achievements⟐</u>
+                        <h3 class="achievements">
+
+                        </h3>
                     </div>
                     <div class="char-card-back">
                         <h3 class="description">
