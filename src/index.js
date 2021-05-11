@@ -1,3 +1,4 @@
+//define vars
 const newBtn = document.querySelector("#new-character > input[type=submit]:nth-child(18)")
 const charMenu = document.getElementById("char-menu")
 const charactersDiv = document.querySelector(".characters")
@@ -16,48 +17,63 @@ const charP = document.getElementById("cha")
 const dextP = document.getElementById("dex")
 const descP = document.createElement("p")
 
+
+const newCharForm = document.getElementById("new-character")
+
+const charDb = "http://localhost:3000/characters"
+const achvDb = "http://localhost:3000/achievements"
+
+//form hide and seek and post--working
 newBtn.addEventListener('click', () => {
   addChar = !addChar;
   if (addChar) {
     contDiv.style.display = "block";
-    const newCharForm = document.getElementById("new-character")
+    newCharForm
+    // const newCharForm = document.getElementById("new-character") --when defined here it doesn't get called
   } else {
     contDiv.style.display = "none";
   }
-newCharForm.addEventListener('submit', eve=> {
-  eve.preventDefault()
-
-  let newChar = {
-    id: '',
-    name: eve.target.name.value,
-    race: eve.target.selectedIndex,
-    class: eve.target.selectedIndex,
-    image: eve.target.image.value,
-    description: eve.target.description.value,
-    stats: {
-
-    }
-  }
-
-  fetch('http://localhost:3000/characters', {
-      method: 'POST',
-      headers: {
-          'content-type': 'application/json',
-          'accept': 'application/json'
-      },
-      body: JSON.stringify(newChar)
-  })
-    .then(res => res.json())
-    .then(charObj => {
-      menuList(charObj)
-
-      commForm.reset()
-    })
-
-})
   
+  //submit form listener -- not sure if working
+  newCharForm.addEventListener('submit', eve=> {
+    eve.preventDefault()
+
+    let newChar = {
+      id: '',
+      name: eve.target.name.value,
+      race: eve.target.selectedIndex,
+      class: eve.target.selectedIndex,
+      image: eve.target.image.value,
+      description: eve.target.description.value,
+      stats: {
+
+      }
+    }
+    //call post function -- technically working (see function definition)
+    postChar(newChar)
+  })
 })
 
+//define post function
+//what is currently happening with post: adds a new character instance to db, but does not load input
+const postChar = () => {
+  fetch('http://localhost:3000/characters', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            'accept': 'application/json'
+        },
+        body: JSON.stringify(newChar)
+    })
+      .then(res => res.json())
+      .then(charObj => {
+        menuList(charObj)
+
+        newCharForm.reset()
+      })
+
+}
+//fetch chars -- working
 fetch('http://localhost:3000/characters')
   .then(res => res.json())
   .then(charArray => {
@@ -67,6 +83,7 @@ fetch('http://localhost:3000/characters')
     })
   })
 
+//create menu list -- working
 function menuList(charObj){
   let img = document.createElement('img')
   img.src = charObj.image
@@ -75,6 +92,7 @@ function menuList(charObj){
   charMenu.append(img)
 }
 
+//set first card value -- working
 function firstCard(charArray){
   detImg.src = charArray[0].image
   h2Name.textContent = `Name: ${charArray[0].name}`
@@ -90,13 +108,9 @@ function firstCard(charArray){
   agiP.textContent = `AGI: ${charArray[0].stats.agility}`
   charP.textContent = `CHA: ${charArray[0].stats.charisma}`
   dextP.textContent = `DEX: ${charArray[0].stats.dexterity}`
-
-  
-
-
-
 }
 
+//listen for click on menu and load char -- working
 charMenu.addEventListener('click', event => {
 
     fetch(`http://localhost:3000/characters/${event.target.dataset.id}`)
@@ -105,6 +119,7 @@ charMenu.addEventListener('click', event => {
   }
 )
 
+//define details for char loaded -- working
 function detailCard(menuObj){
 
   detImg.src = menuObj.image
@@ -115,8 +130,6 @@ function detailCard(menuObj){
   agiP.textContent = `AGI: ${menuObj.stats.agility}`
   charP.textContent = `CHA: ${menuObj.stats.charisma}`
   dextP.textContent = `DEX: ${menuObj.stats.dexterity}`
-
-
 
   h2Name.textContent = menuObj.name
   h3Race.textContent = `Race: ${menuObj.race}`
