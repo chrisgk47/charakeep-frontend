@@ -23,6 +23,7 @@ const charDb = "http://localhost:3000/characters"
 const achvDb = "http://localhost:3000/achievements"
 
 const newChar = {}
+let intAch = parseInt(ev.target.dataset.id)
 
 //form hide and seek and post--working
 newBtn.addEventListener('click', () => {
@@ -47,11 +48,32 @@ newBtn.addEventListener('click', () => {
       image: eve.target.image.value,
       description: eve.target.description.value,
       stats: {
-
+        
       }
     }
+    // function newCard(newChar){  //thought that maybe adding card function to post would help sync data. maybe just need to define a function below and call it like how we did with post method
+
+    //   detImg.src = newChar.image
+      
+    //   agiP.innerHTML = ""
+    //   charP.textContent = ""
+    //   dextP.textContent = ""
+    //   agiP.textContent = `AGI: ${newChar.stats.agility}`
+    //   charP.textContent = `CHA: ${newChar.stats.charisma}`
+    //   dextP.textContent = `DEX: ${newChar.stats.dexterity}`
+    
+    //   h2Name.textContent = menuObj.name
+    //   h3Race.textContent = `Race: ${newChar.race}`
+    //   h3Class.textContent = `Class: ${newChar.class}`
+    //   descP.textContent = ''
+    //   descP.textContent = `${newChar.description}`
+    //   hDesc.innerHTML = ''
+    //   hDesc.append(descP)
+     
+    // }
+
     //call post function -- adds new char instance but not fully functioning
-    postChar(newChar)
+    postChar(newCard)
   })
 })
 
@@ -73,7 +95,7 @@ const postChar = () => {
         // newCharForm.reset() removed temp as for some reason prevents new instance from being added
       })
 }
-//fetch chars -- working
+//fetch all chars -- working
 fetch('http://localhost:3000/characters')
   .then(res => res.json())
   .then(charArray => {
@@ -142,6 +164,39 @@ function detailCard(menuObj){
  
 }
 
+//post ach
+achForm.addEventListener('submit', ev => {
+  ev.preventDefault()
+  intAch // let intAch = parseInt(ev.target.dataset.id) //for some reason not getting called
+  fetch(`http://localhost:3000/achievements`, {
+   method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            'accept': 'application/json'
+        },
+    body: JSON.stringify({
+      id: '',
+      imageId: intAch,
+      content: ev.target.achievement.value
+    })
+  }
+  .then(res => res.json())
+  .then(achObj => {
+        achP.textContent = achObj.content
+        achH3.append(achP)
+  })
+)
+
+//delete char
+deleteBtn.addEventListener('click', e => {
+    fetch(`http://localhost:3000/characters/${e.target.dataset.id}`, {
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(e.target.remove())
+  console.log("removed")
+})
+
 
 
 //TO DO: 
@@ -150,4 +205,3 @@ function detailCard(menuObj){
       //-create another that takes charObj as an argument?
   //edit/patch function --will require slight addition to css/html
   //delete function -- will require slight addition to css/html
-
