@@ -4,9 +4,9 @@
     box-sizing: border-box;
   }
   
-
+ 
   html { 
-    background: url("assets/images/scroll.jpg") no-repeat center center fixed; 
+    background: url("https://dndbackgrounds.net/wp-content/uploads/dnd-5e-backgrounds-1.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -92,7 +92,7 @@
     width: 400px;
     height: 600px;
     perspective: 1000px;
-    opacity: .8;
+    /* opacity: .8; */
   }
   .char-card-front {
     position: relative;
@@ -120,19 +120,19 @@
   }
 
   .characters {
-    background-color: transparent;
+    background-color:  #a58859; 
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     outline-style: groove;
   }
 
   .char-card-black {
-    background-color: transparent;
+    /* background-color: rgb(212, 162, 139);; */
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     transform: rotateY(180deg);
   }
-
+  
 .char-card-back {
-    background-color: transparent;
+    background-color:  #a58859; 
     position: absolute;
     width: auto;
     height: auto;
@@ -151,7 +151,7 @@ div.characters {
     /* float: left; */
     height: 250px;
     width: 230px;
-    opacity: 0.2px;
+    /* opacity: 0.2px; */
     
   }
   
