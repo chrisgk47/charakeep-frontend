@@ -1,5 +1,6 @@
 //define vars
 const newBtn = document.querySelector("#new-character > input[type=submit]:nth-child(18)")
+
 const charMenu = document.getElementById("char-menu")
 const charactersDiv = document.querySelector(".characters")
 let addChar = true
@@ -11,14 +12,20 @@ const h3Race = document.querySelector("h3.race")
 const h3Class = document.querySelector("h3.class")
 const hDesc = document.querySelector("h3.description")
 
-const statsDiv = document.getElementById("stats")
+//const statsDiv = document.getElementById("stats")
 const agiP = document.getElementById("agi")
 const charP = document.getElementById("cha")
 const dextP = document.getElementById("dex")
 const descP = document.createElement("p")
 
-
 const newCharForm = document.getElementById("new-character")
+const achForm = document.querySelector(".ach-form")
+const achH3 = document.querySelector("h3.achievements")
+const achP = document.createElement('p')
+
+const deleteBtn = document.querySelector('.delete-button')
+
+const baseUrl = "http://localhost:3000"
 const charDb = "http://localhost:3000/characters"
 const achvDb = "http://localhost:3000/achievements"
 
@@ -184,9 +191,9 @@ achForm.addEventListener('submit', ev => {
   .then(achObj => {
         achP.textContent = achObj.content
         achH3.append(achP)
-  })
-)
-
+    })
+  )
+})
 //delete char
 deleteBtn.addEventListener('click', e => {
     fetch(`http://localhost:3000/characters/${e.target.dataset.id}`, {
@@ -204,4 +211,4 @@ deleteBtn.addEventListener('click', e => {
     //-menuObj in detailCard? would charObj get our detail? would still want detailCard as a function for menu
       //-create another that takes charObj as an argument?
   //edit/patch function --will require slight addition to css/html
-  //delete function -- will require slight addition to css/html
+  //delete function -- will require slight addition to css

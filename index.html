@@ -35,6 +35,8 @@
                 }
             }
             </script>
+        
+
         <div id=form-container>
             <button onclick="hideForm()">Click to Show/Hide New Character Form</button>
             <form id="new-character" style="display:none;">
@@ -42,40 +44,13 @@
                 <label for="name">Name: </label>
                 <input type="text" name="name" id="new-name" />
                 <label for="race">Race:</label>
-                    <select name="race" id="new-race" form="raceform">
-                        <option id="dragon" value="Dragonborn">Dragonborn</option>
-                        <option id="dwarf" value="Dwarf">Dwarf</option>
-                        <option id="elf" value="Elf">Elf</option>
-                        <option id="gnome" value="Gnome">Gnome</option>
-                        <option id="halfelf" value="Half-Elf">Half-Elf</option>
-                        <option id="halfling"value="Halfling">Dwarf</option>
-                        <option id="halforcvalue="Half-Orc">Half-Orc</option>
-                        <option id="human" value="Human">Human</option>
-                        <option id="tief" value="Tiefling">Tiefling</option>
-                        <option id="orc" value="Orc">Orc</option>
-                    </select>
+                <input type="text" name="race" id="raceVal" name="raceVal">
                 <label for="charclass">Class:</label>
-                    <select name="charclass" id=new-class" form="classform">
-                        <option value="Cleric">Cleric</option>
-                        <option value="Bard">Bard</option>
-                        <option value="Barbarian">Barbarian</option>
-                        <option value="Paladin">Paladin</option>
-                        <option value="Rogue">Rogue</option>
-                        <option value="Wizard">Wizard</option>
-                        <option value="Warlock">Warlock</option>
-                        <option value="Druid">Druid</option>
-                        <option value="Warrior">Warrior</option>
-                    </select>
+                <input type="text" name="class" id="new-class" name="new-class">
                 <label for="image">Image: </label>
                 <input type="text" name="image" id="new-image" />
                 <label for="description">Description: </label>
                 <input type="text" name="description" id="new-description" />
-                <label for="agility">AGI:</label>
-                <input type="number" min="0" max="20" value="1">
-                <label for="charisma">CHA:</label>
-                <input type="number" min="0" max="20" value="1">
-                <label for="dexterity">DEX:</label>
-                <input type="number" min="0" max="20" value="1">
                 <input type="submit" value="Create"/>
             </form>
         </div>
@@ -92,35 +67,34 @@
             </div>
         </header>
         
-        <div class="outer-div">
-            <div class="char-detail">
-                <div class="char-card-inner">
-                    <div class="characters">
-                        <img class="detail-image" src="" style="width:300px;height:300px;">
-                        <h2 class="name"></h2>
-                        <h3 class="race"></h3>
-                        <h3 class="class"></h3>
-                            <u>⟐Achievements⟐</u>
-                        <h3 class="achievements">
-
-                        </h3>
-                    </div>
-                    <div class="char-card-back">
-                        <h3 class="description">
-                            
-                        </h3>
-                        <div id = "stats">
-                            <h3><u>Stats</u></h3>
-                            <h4 id="agi"></h4>
-                            <h4 id="cha"></h4>
-                            <h4 id="dex"></h4>
-                        <div>
+        <!-- <div class="outer-div"> -->
+        <div class="char-card">
+            <div class="char-card-front">
+                <div class="characters">
+                    <img class="detail-image" src="" style="width:300px;height:300px;">
+                    <h2 class="name"></h2>
+                    <h3 class="race"></h3> 
+                    <h3 class="class"></h3>
+                    <h3><u>Stats</u></h3>
+                    <h4 class="agi" id="agi"></h4>
+                    <h4 class="cha" id="cha"></h4>
+                    <h4 class="dex" id="dex"></h4>
                 </div>
+                <div class="char-card-back">
+                    <button class="delete-button" data-id="">x</button>
+                    <h3 class="description">
+                        
+                    </h3>
+                    <u>⟐Achievements⟐</u>
+                    <h3 class="achievements">""</h3>
+                    <form class="ach-form">
+                        <input class="achievement-input" type="text" name="achievement" placeholder="Add an Achievement..."/>
+                    <button class="achievement-button" type="submit">Post</button>
+                    </form>
                 </div>
             </div>
-                
-            
-        
+        </div>
+        <!-- </div> -->
     </body>
     
 </html>

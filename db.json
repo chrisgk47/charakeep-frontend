@@ -64,6 +64,19 @@
         "charisma": 10,
         "dexterity": 12
       }
+    },
+    {
+      "id": 6,
+      "name": "Alduin Daardendrian",
+      "race": "Dragonborn",
+      "class": "Warrior",
+      "image": "https://i.pinimg.com/736x/76/a6/c3/76a6c3fe732c995ed251addfaeb9113a.jpg",
+      "description": "Shaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids.",
+      "stats": {
+        "agility": 10,
+        "charisma": 16,
+        "dexterity": 6
+      }
     }
   ],
   "achievements": [
@@ -141,6 +154,71 @@
       "id": 15,
       "imageId": 5,
       "content": "Bloodlust"
+    },
+    {
+      "id": 16,
+      "imageId": 2,
+      "content": "Smoked!"
+    },
+    {
+      "id": 17,
+      "imageId": 6,
+      "content": "Finish Him!"
+    },
+    {
+      "id": 18,
+      "imageId": 1,
+      "content": "Finish Him"
+    },
+    {
+      "id": 19,
+      "imageId": 3,
+      "content": "Torched 100 Parties!"
+    },
+    {
+      "id": 20,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 21,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 22,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 23,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 24,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 25,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 26,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 27,
+      "imageId": null,
+      "content": ""
+    },
+    {
+      "id": 28,
+      "imageId": null,
+      "content": ""
     }
   ]
 }
