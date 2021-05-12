@@ -77,6 +77,19 @@
         "charisma": 16,
         "dexterity": 6
       }
+    },
+    {
+      "id": 7,
+      "name": "Decae",
+      "race": "Dragonborn",
+      "class": "Sorcerer",
+      "image": "https://static.wikia.nocookie.net/forgottenrealms/images/3/3b/Dragonborn-5e.png",
+      "description": "Oooga booga",
+      "stats": {
+        "agility": 18,
+        "charisma": 2,
+        "dexterity": 2
+      }
     }
   ],
   "achievements": [
@@ -219,6 +232,21 @@
       "id": 28,
       "imageId": null,
       "content": ""
+    },
+    {
+      "id": 29,
+      "imageId": 7,
+      "content": "Ate 5 goblins"
+    },
+    {
+      "id": 30,
+      "imageId": 7,
+      "content": ""
+    },
+    {
+      "id": 31,
+      "imageId": 7,
+      "content": "Learned a word"
     }
   ]
 }
