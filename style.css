@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('assets/fonts/piedra.ttf')  format('truetype'); /* Safari, Android, iOS */
+      
+}
+
 * {
     margin: 0;
     padding:0;
@@ -6,7 +12,7 @@
   
 
   html { 
-    background: url("assets/images/scroll.jpg") no-repeat center center fixed; 
+    background: url("assets/images/Old_paper_05.jpeg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,13 +32,31 @@
     padding: 10px;
   }
   
-  header {
-    padding: 0.5rem;
+
+  h1 {
+    /* padding: 0.5rem;
     width: 100%;
     color: black;
     /* background-color: transparent; */
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    /* text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86); */ 
+width: 398px;
+height: 267px;
+left: 33px;
+top: 0px;
+
+font-family: 'MyWebFont';
+font-size: 64px;
+line-height: 125px;
+letter-spacing: 0.09em;
+
+color: #DFE0C3;
+
+
+text-shadow: 10px 10px 10px rgba(16, 13, 45, 0.75);
+
   }
+
+  
   
   .container {
     margin-top:10px;
