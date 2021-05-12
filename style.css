@@ -74,9 +74,11 @@
     justify-content: center;
     cursor: pointer;
     position: center;
-    padding: 30px;
+    padding: 20px;
     align-items: center;
     text-align: center;
+    outline-style: dashed;
+    outline-color:rgba(92, 18, 18, 0.86);
   }
   
   #char-menu img:last-child {
@@ -114,6 +116,7 @@
     height: auto;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    outline-style: groove;
   }
 
   .characters {
@@ -148,6 +151,7 @@ div.characters {
     /* float: left; */
     height: 250px;
     width: 230px;
+    opacity: 0.2px;
     
   }
   
