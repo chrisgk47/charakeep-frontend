@@ -11,6 +11,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: auto;
+    height: auto;
     
   }
   
@@ -18,7 +20,7 @@
     padding: 1rem;
     position: bottom;
     text-align: center;
-    background-color: transparent;
+    /* background-color: transparent; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,6 +54,17 @@
     text-align: center;
     object-position: 100px 2000px;
   }
+
+  .deleteBtn {
+    background: none;
+    border: none;
+    width: 100px;
+    padding: 8px 16px;
+    height: 100px;
+    color: rgba(214, 0, 0, 0.86);
+    -webkit-appearance: button;
+    cursor: pointer;
+  }
   
   #char-menu img {
     flex: 0 1 auto;
@@ -70,53 +83,66 @@
     left: 10px;
   }
   
-  .char-detail {
+  .char-card {
     display: inline-block;
     /* float: right; */
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 600px;
     perspective: 1000px;
     opacity: .8;
   }
-  .char-card-inner {
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    background-color: transparent;
+  .char-card-front {
+    position: relative;
+    width: auto;
+    height: auto;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: transparent;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
   }
 
-  .char-detail:hover .char-card-inner {
+  .char-card:hover .char-card-front {
     transform: rotateY(180deg);
   }
 
   .characters, .char-card-back {
     position: absolute;
-    width: fit-content;
-    block-size: fit-content;
+    width: auto;
+    height: auto;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
   .characters {
     background-color: transparent;
-    color: black;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    outline-style: groove;
   }
 
-  .char-card-back {
+  .char-card-black {
     background-color: transparent;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    overflow-wrap: anywhere;
-    color: white;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     transform: rotateY(180deg);
   }
+
+.char-card-back {
+    background-color: transparent;
+    position: absolute;
+    width: auto;
+    height: auto;
+    block-size: fit-content;
+    overflow-wrap: fit;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    transform: rotateY(180deg);
+    word-wrap: break-word;
+}
+
+div.characters {
+  width: 100%;
+}
   
   .detail-image {
     /* float: left; */
@@ -135,6 +161,13 @@
     text-align: center;
     text-overflow: ellipse;
     padding: 0px;
+  }
+  .achievement-input {
+    width: 65%;
+  }
+  .ach-form {
+    bottom: 0px;
+    margin: 10px;
   }
 
   p {
@@ -168,14 +201,14 @@
     margin: 5rem 0;
     width: 300px;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     opacity: 0.2px;
-    float: center;
     color: white;
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     left: 50px;
     margin-bottom: 0px;
-    font-size: 25px;
+    line-height: 26pt;
+    font-size: 20px;
   }
   
   input,
@@ -191,7 +224,8 @@
   input[type="submit"] {
     color: white;
     border: 1px solid white;
-    background-color: black;
+    background-color: gray;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     cursor: pointer;
     transition: all 0.3s;
   }
@@ -232,4 +266,7 @@
     position: center;
   }
  
+  
+  
+
   
