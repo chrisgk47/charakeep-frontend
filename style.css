@@ -1,365 +1,376 @@
 * {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: cursive;
-    line-height: 150%;
-  }
-  
-  html { 
-    background: url("https://dndbackgrounds.net/wp-content/uploads/dnd-5e-backgrounds-1.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: auto;
-    height: auto;
-    
-  }
-  
-  body {
-    padding: 1rem;
-    position: bottom;
-    text-align: center;
-    /* background-color: transparent; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  header {
-    padding: 0.5rem;
-    width: 100%;
-    color: black;
-    /* background-color: transparent; */
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-  }
-  
-  .container {
-    margin-top:10px;
-    align-items: center;
-    text-align: center;
-    /* opacity: 0.7; */
-  }
-  
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: cursive;
+  line-height: 150%;
+}
 
-  #char-menu {
-    display: flex;
-    overflow-x: auto;
-    margin: 0.5rem 0;
-    max-width: calc(100vw - 2rem);
-    opacity: 0.7;
-    background-color: transparent;
-    text-align: center;
-    object-position: 100px 2000px;
-  }
-
-  .delete-button {
-    background-color: transparent;
-    position: flex;
-    border: groove;
-    border-color: black;
-    align-items: center;
-    width: 50px;
-    padding: 6px 6px;
-    font-size: 24px;
-    height: 50px;
-    color: rgba(0, 0, 0, 0.86);
-    -webkit-appearance: button;
-    cursor: pointer;
-  }
-
-  .achdel-btn {
-    background-color: transparent;
-    position: absolute;
-    border: groove;
-    border-color: black;
-    align-items: center;
-    width: 25px;
-    padding: 6px 6px;
-    font-size: 12px;
-    height: 25px;
-    color: rgba(0, 0, 0, 0.86);
-    -webkit-appearance: button;
-    cursor: pointer;
-    right: 20px;
-    /* float: right; */
-  }
+html { 
+  background: url("https://dndbackgrounds.net/wp-content/uploads/dnd-5e-backgrounds-1.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: auto;
+  height: auto;
   
-  #char-menu img {
-    flex: 0 1 auto;
-    height: 250px;
-    width: 225px;
-    margin-right: 1rem;
-    justify-content: center;
-    cursor: pointer;
-    position: center;
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-    border-radius: 50px;
-    border: 5px solid rgba(0, 0, 0, 0.86);
-  }
-  
-  #char-menu img:last-child {
-    left: 10px;
-  }
-  
-  .char-card {
-    display: inline-block;
-    background-color: transparent;
-    width: 400px;
-    height: 450px;
-    perspective: 1000px;
-    border-radius: 50px;
-    /* opacity: .8; */
-  }
-  .char-card-front {
-    position: relative;
-    width: auto;
-    height: auto;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: transparent;
-    border-radius: 50px;
-    font-size: 15px;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-  }
+}
 
-  .char-card:hover .char-card-front {
-    transform: rotateY(180deg);
-  }
+body {
+  padding: 1rem;
+  position: bottom;
+  text-align: center;
+  /* background-color: transparent; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
 
-  .characters, .char-card-back {
-    position: absolute;
-    width: auto;
-    height: auto;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 50px;
-    /* outline-style: groove; */
-  }
+header {
+  padding: 0.5rem;
+  width: 100%;
+  color: black;
+  /* background-color: transparent; */
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+}
 
-  .characters {
+.container {
+  margin-top:10px;
+  align-items: center;
+  text-align: center;
+  /* opacity: 0.7; */
+}
+
+
+#char-menu {
+  display: flex;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+  max-width: calc(100vw - 2rem);
+  opacity: 0.7;
+  background-color: transparent;
+  text-align: center;
+  object-position: 100px 2000px;
+}
+
+.delete-button {
+  background-color: transparent;
+  position: flex;
+  border: groove;
+  border-color: black;
+  align-items: center;
+  width: 50px;
+  padding: 6px 6px;
+  font-size: 24px;
+  height: 50px;
+  color: rgba(0, 0, 0, 0.86);
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.achdel-btn {
+  background-color: transparent;
+  position: absolute;
+  border: groove;
+  border-color: black;
+  align-items: center;
+  width: 25px;
+  padding: 6px 6px;
+  font-size: 12px;
+  height: 25px;
+  color: rgba(0, 0, 0, 0.86);
+  -webkit-appearance: button;
+  cursor: pointer;
+  right: 20px;
+  /* float: right; */
+}
+
+#char-menu img {
+  flex: 0 1 auto;
+  height: 250px;
+  width: 225px;
+  margin-right: 1rem;
+  justify-content: center;
+  cursor: pointer;
+  position: center;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.86);
+}
+
+#char-menu img:last-child {
+  left: 10px;
+}
+
+.char-card {
+  display: inline-block;
+  background-color: transparent;
+  width: 400px;
+  height: 450px;
+  perspective: 1000px;
+  border-radius: 50px;
+  /* opacity: .8; */
+}
+.char-card-front {
+  position: relative;
+  width: auto;
+  height: auto;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: transparent;
+  border-radius: 50px;
+  font-size: 15px;
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+}
+
+.char-card:hover .char-card-front {
+  transform: rotateY(180deg);
+}
+
+.characters, .char-card-back {
+  position: absolute;
+  width: auto;
+  height: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50px;
+  /* outline-style: groove; */
+}
+
+.characters {
+  /* background-color:  #a58859;  */
+  border: 2px solid black;
+  background: url('https://64.media.tumblr.com/ecdae026a020187827160c640780adb5/tumblr_ocs6lhjx071vu5c8fo1_1280.jpg') 0 0 no-repeat;
+  background-size: cover;
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  /* outline-style: groove; */
+  border-color: black;
+  border-radius: 50px;
+}
+
+.char-card-back {
+  /* background-color: rgb(212, 162, 139);; */
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  transform: rotateY(180deg);
+}
+
+.char-card-back {
     /* background-color:  #a58859;  */
+    position: absolute;
     border: 2px solid black;
-    background: url('https://64.media.tumblr.com/ecdae026a020187827160c640780adb5/tumblr_ocs6lhjx071vu5c8fo1_1280.jpg') 0 0 no-repeat;
+    background: url('assets/images/card.jpg') 0 0 no-repeat;
     background-size: cover;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    /* outline-style: groove; */
-    border-color: black;
-    border-radius: 50px;
-  }
-
-  .char-card-back {
-    /* background-color: rgb(212, 162, 139);; */
+    opacity: 0.3px;
+    width: auto;
+    height: auto;
+    block-size: fit-content;
+    overflow-wrap: fit;
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     transform: rotateY(180deg);
-  }
-  
-  .char-card-back {
-      /* background-color:  #a58859;  */
-      position: absolute;
-      border: 2px solid black;
-      background: url('assets/images/card.jpg') 0 0 no-repeat;
-      background-size: cover;
-      opacity: 0.3px;
-      width: auto;
-      height: auto;
-      block-size: fit-content;
-      overflow-wrap: fit;
-      text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-      transform: rotateY(180deg);
-      word-wrap: break-word;
-  }
+    word-wrap: break-word;
+}
 
 
-  div.characters {
-    width: 100%;
-  }
+div.characters {
+  width: 100%;
+}
+
+.detail-image {
+  /* float: left; */
+  height: 250px;
+  width: 230px;
+  outline-style: groove;
+  border-color:rgba(214, 0, 0, 0.86)
+  /* opacity: 0.2px; */
   
-  .detail-image {
-    /* float: left; */
-    height: 250px;
-    width: 230px;
-    outline-style: groove;
-    border-color:rgba(214, 0, 0, 0.86)
-    /* opacity: 0.2px; */
-    
-  }
-  
-  .description {
-    /* position: center; */
-    /* text-overflow: ellipsis; */
-    line-height: 70%;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    width:500px;
-    font-style: italic;
-    font-size: 20px;
-    text-align: center;
-    text-overflow: ellipse;
+}
+
+.description {
+  /* position: center; */
+  /* text-overflow: ellipsis; */
+  line-height: 70%;
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  width:500px;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  text-overflow: ellipse;
+  padding: 0px;
+}
+.edit-form {
+    position: relative;
+    height: 50%;
     padding: 0px;
-  }
-  .edit-form {
-      position: relative;
-  }
-  .edit-input {
-      width: 75%;
-      line-height: 60%;
-      top: 0px;
-  }
-  .edit-button {
-      width:30%;
-      display: inline-block;
-  }
-
-  .ach-ul {
-      font-size: 20px;
-      list-style-type: none;
-  }
-
-  .achievements {
-    margin: 0;
-    display: inline-block;
-  }
-
-  .achievement-input {
-    width: 75%;
-    padding:10px;
-  }
-  .ach-form {
-    bottom: 0px;
-    margin: 10px;
-  }
-
-  p {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: -5px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    padding: -10px;
-  }
- 
-  /* .hide-form {
-    position: absolute;
-    background-color: transparent;
-    opacity: 0.5;
-    border: black;
-    border-radius: 5px;
-    color:rgba(214, 0, 0, 0.86);
-    height: 2rem;
-    width: max-content;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    font-size: 18px;
-    justify-self: left;
-    left: 0px;
-    right: 10px;
-    margin: 10px;
-    bottom: 35px;
-    /* bottom: -50px; */
-  } */
-
-  button {
-    position: flex;
-    background-color: #3a3939;
-    opacity: 0.4;
-    border: black;
-    border-radius: 5px;
-    height: 2rem;
-    width: max-content;
-    color:rgba(214, 0, 0, 0.86);
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    display: inline-block;
-    font-size: 18px;
-    justify-self: center;
-    left: 50px;
-    bottom: -20px;
-  }
-
-  form {
-    display: inline-block;
-    margin: 5rem 0;
-    width: 300px;
-    flex-direction: column;
-    text-align: left;
-    opacity: 0.2px;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(39, 34, 34, 0.86);
-    left: 50px;
-    margin-bottom: 0px;
-    line-height: 26pt;
-    font-size: 20px;
-  }
-  
-  input,
-  textarea {
-    font-size: 1rem;
-    border: 1px solid black;
-    background-color: rgb(196, 172, 120);
-    /* background-color: rgb(184, 184, 184); */
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    padding: 0.5rem;
-    margin: 0.25rem 0;
-    width: 100%;
-    border-radius: 30px;
-  }
-  
-  input[type="submit"] {
-    color: white;
-    border: 1px solid white;
-    background-color: rgb(12, 12, 12);
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-    cursor: pointer;
-    transition: all 0.3s;
-    back
-  }
-  
-  input[type="submit"]:active {
-    background-color: gray;
-  }
-  .select{
-    font-size: 34px;
-    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-  }
-
-  #audio {
-    opacity: .2;
-    position: absolute;
-    right: 50px;
-    /* bottom: -10px; */
-    width: 20%;
-    top: 0px;
-  }
-  
-  #new-character{
-    opacity: 0.5px;
-  }
-
-  video {
-    width: 15%;
-    height: 10%;
-    opacity: 0.4;
-    position: absolute;
-    left: 30px;
-    /* right: 10px; */
     margin: 0px;
-    /* bottom: 35px; */
-    top: 0px;
-  }
-  
-  u {
-    font-size: 25px;
-    position: center;
-  }
- 
-  
-  
+    line-height: 60%;
 
-  
+
+}
+.edit-input {
+    width: 75%;
+    /* line-height: 60%;
+    top: 0px;
+    display: inline-block;
+    margin-left: 20px;
+    left: 10px; */
+}
+/* .edit-button {
+    width:30%;
+    display: inline-block;
+    right: 0px;
+    margin-left: 40px;
+    left: 20px;
+} */
+
+.ach-ul {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.achievements {
+  margin: 0;
+  display: inline-block;
+}
+
+.achievement-input {
+  width: 75%;
+  padding:10px;
+}
+.ach-form {
+  bottom: 0px;
+  margin: 10px;
+}
+
+p {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: -5px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  padding: -10px;
+}
+
+/* .hide-form {
+  position: absolute;
+  background-color: transparent;
+  opacity: 0.5;
+  border: black;
+  border-radius: 5px;
+  color:rgba(214, 0, 0, 0.86);
+  height: 2rem;
+  width: max-content;
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  font-size: 18px;
+  justify-self: left;
+  left: 0px;
+  right: 10px;
+  margin: 10px;
+  bottom: 35px;
+  /* bottom: -50px; */
+} */
+
+button {
+  position: flex;
+  background-color: #3a3939;
+  opacity: 0.4;
+  border: black;
+  border-radius: 5px;
+  height: 2rem;
+  width: max-content;
+  color:rgba(214, 0, 0, 0.86);
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  display: inline-block;
+  font-size: 18px;
+  justify-self: center;
+  left: 50px;
+  bottom: -20px;
+}
+
+form {
+  display: inline-block;
+  margin: 5rem 0;
+  width: 300px;
+  flex-direction: column;
+  text-align: left;
+  opacity: 0.2px;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(39, 34, 34, 0.86);
+  left: 50px;
+  margin-bottom: 0px;
+  line-height: 26pt;
+  font-size: 20px;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  border: 1px solid black;
+  background-color: rgb(196, 172, 120);
+  /* background-color: rgb(184, 184, 184); */
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  width: 100%;
+  border-radius: 30px;
+}
+
+input[type="submit"] {
+  color: white;
+  border: 1px solid white;
+  background-color: rgb(12, 12, 12);
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  cursor: pointer;
+  transition: all 0.3s;
+  back
+}
+
+input[type="submit"]:active {
+  background-color: gray;
+}
+.select{
+  font-size: 34px;
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+}
+
+#audio {
+  opacity: .2;
+  position: absolute;
+  right: 50px;
+  /* bottom: -10px; */
+  width: 20%;
+  top: 0px;
+}
+
+#new-character{
+  opacity: 0.5px;
+}
+
+video {
+  width: 15%;
+  height: 10%;
+  opacity: 0.4;
+  position: absolute;
+  left: 30px;
+  /* right: 10px; */
+  margin: 0px;
+  /* bottom: 35px; */
+  top: 0px;
+}
+
+u {
+  font-size: 25px;
+  position: center;
+}
+
+
+
+

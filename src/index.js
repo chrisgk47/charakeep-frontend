@@ -226,7 +226,7 @@ deleteBtn.addEventListener('click', e => {
 })
 //refresh function
 function refreshPage(){
-  if(confirm("Are you sure you want to delete this character?")){
+  if(confirm("Click 'OK' to Delete")){
     location.reload();
   }
 }
