@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Charakeep</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -26,6 +26,7 @@
             
         </script>
         <script>
+
             function hideForm() {
                 let x = document.getElementById("new-character");
                 if (x.style.display === "none") {
@@ -34,9 +35,8 @@
                 x.style.display = "none";
                 }
             }
-            </script>
+        </script>
         
-
         <div id=form-container>
             <button onclick="hideForm()">Click to Show/Hide New Character Form</button>
             <form id="new-character" style="display:none;">
@@ -53,9 +53,9 @@
                 <input type="text" name="description" id="new-description" />
                 <input type="submit" value="Create"/>
             </form>
-        </div>
-    </div>  
+        </div> 
     </head>
+    
     <body>
         <header>
             <h1>⟐CharaKeep⟐</h1>
@@ -72,21 +72,27 @@
             <div class="char-card-front">
                 <div class="characters">
                     <img class="detail-image" src="" style="width:300px;height:300px;">
-                    <h2 class="name"></h2>
-                    <h3 class="race"></h3> 
-                    <h3 class="class"></h3>
-                    <h3><u>Stats</u></h3>
+                    <h2 class="name" id="c-name"></h2>
+                    <h3 class="race" id="c-race"></h3> 
+                    <h3 class="class" id="c-class"></h3>
+                    <h3 class="stat-title" id="stat-title"><u>Stats</u></h3>
                     <h4 class="agi" id="agi"></h4>
                     <h4 class="cha" id="cha"></h4>
                     <h4 class="dex" id="dex"></h4>
                 </div>
                 <div class="char-card-back">
                     <button class="delete-button" data-id="">x</button>
-                    <h3 class="description">
+                    <h3 class="description" id="c-descrip">
                         
                     </h3>
-                    <u>⟐Achievements⟐</u>
-                    <h3 class="achievements">""</h3>
+                    <form class="edit-form" id="edit-form">
+                        <input class="edit-input" id="edit-input" type="text" name="edit" placeholder="Edit Description">
+                        <button class="edit-button" type="submit">Edit</button>
+                    </form>
+                    <h3 class="ach-title" id="ach-title"> <u>⟐Achievements⟐</u> </h3>
+                    <ul class="ach-ul" id="ach-ul">
+                        ""
+                    </ul>
                     <form class="ach-form">
                         <input class="achievement-input" type="text" name="achievement" placeholder="Add an Achievement..."/>
                     <button class="achievement-button" type="submit">Post</button>

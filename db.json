@@ -6,7 +6,7 @@
       "race": "Dwarf",
       "class": "Paladin",
       "image": "assets/images/freyjarm.jpg",
-      "description": "Wisdom is knowing that tomato is not a fruit",
+      "description": "Wisdom is knowing tomato is a fruit",
       "stats": {
         "agility": 11,
         "charisma": 14,
@@ -156,24 +156,19 @@
       "content": "Bloodlust"
     },
     {
-      "id": 16,
-      "imageId": 2,
-      "content": "Smoked!"
-    },
-    {
       "id": 17,
       "imageId": 6,
       "content": "Finish Him!"
     },
     {
-      "id": 18,
-      "imageId": 1,
-      "content": "Finish Him"
-    },
-    {
       "id": 19,
       "imageId": 3,
       "content": "Torched 100 Parties!"
+    },
+    {
+      "id": 20,
+      "imageId": 4,
+      "content": "Shredded"
     }
   ]
 }

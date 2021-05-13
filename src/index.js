@@ -1,24 +1,27 @@
-const newBtn = document.querySelector("#form-container > button")
-// document.querySelector("#new-character > input[type=submit]:nth-child(18)")
-const newCharForm = document.getElementById('new-character')
-const achForm = document.querySelector(".ach-form")
 const charMenu = document.getElementById("char-menu")
 const charactersDiv = document.querySelector(".characters")
 let addChar = true
 const contDiv = document.querySelector(".container")
 const detImg = document.querySelector("img.detail-image")
-const h2Name = document.querySelector("h2.name")
-const h3Race = document.querySelector("h3.race")
-const h3Class = document.querySelector("h3.class")
-const hDesc = document.querySelector("h3.description")
+const h2Name = document.getElementById("c-name")
+const h3Race = document.getElementById("c-race")
+const h3Class = document.getElementById("c-class")
+const hDesc = document.getElementById("c-descrip")
 const agiP = document.getElementById("agi")
 const charP = document.getElementById("cha")
 const dextP = document.getElementById("dex")
 const descP = document.createElement("p")
-const achH3 = document.querySelector("h3.achievements")
-const achP = document.createElement('p')
+const achUl = document.getElementById('ach-ul')
+const achLi = document.createElement('li')
+
+const newBtn = document.querySelector("#form-container > button")
+const newCharForm = document.getElementById('new-character')
+const achForm = document.querySelector(".ach-form")
+const achDeleteBtn = document.getElementById('achdel-btn')
 const deleteBtn = document.querySelector('.delete-button')
-const baseUrl = "http://localhost:3000/"
+const editForm = document.getElementById('edit-form')
+
+
 //hide and seek new char form
 newBtn.addEventListener('click', () => {
   addChar = !addChar;
@@ -50,27 +53,37 @@ function menuList(charObj){
 function firstCard(charArray){
   let firstC = charArray[0]
   detImg.dataset.id = firstC.id
+  //front card
   detImg.src = firstC.image
   h2Name.textContent = firstC.name
   h3Race.textContent = `Race: ${firstC.race}`
   h3Class.textContent = `Class: ${firstC.class}`
-  descP.textContent = ""
-  descP.textContent = `${charArray[0].description}`
-  hDesc.append(descP)
   agiP.innerHTML = ""
   charP.textContent = ""
   dextP.textContent = ""
   agiP.textContent = `AGI: ${charArray[0].stats.agility}`
   charP.textContent = `CHA: ${charArray[0].stats.charisma}`
   dextP.textContent = `DEX: ${charArray[0].stats.dexterity}`
-  achH3.innerHTML = ""
+  //back card
+  descP.textContent = ""
+  descP.textContent = `${charArray[0].description}`
+  descP.dataset.id = `${charArray[0].id}`
+  hDesc.append(descP)
+  editForm.dataset.id = `${charArray[0].id}`
+  
+  achUl.innerHTML = ""
   fetch("http://localhost:3000/achievements")
     .then(res => res.json())
     .then(achArr => achArr.forEach(achObj => {
       if(achObj.imageId == firstC.id){
-        let achP = document.createElement('p')
-        achP.textContent = achObj.content
-        achH3.append(achP)
+        let achLi = document.createElement('li')
+        achLi.textContent = achObj.content
+        let achBtn = document.createElement('BUTTON')
+        achBtn.classList.add("achdel-btn")
+        achBtn.dataset.id = achObj.id
+        achBtn.textContent = "X"
+        achLi.appendChild(achBtn)
+        achUl.append(achLi)
       }
     }))
 }
@@ -83,29 +96,51 @@ charMenu.addEventListener('click', event => {
 )
 //define data for cards from db
 function detailCard(menuObj){
+  //front card
   deleteBtn.dataset.id = menuObj.id
   detImg.dataset.id = menuObj.id
   detImg.src = menuObj.image
-  achForm.dataset.id = menuObj.id
+  h2Name.textContent = menuObj.name
+  h3Race.textContent = `Race: ${menuObj.race}`
+  h3Class.textContent = `Class: ${menuObj.class}`
   agiP.innerHTML = ""
   charP.textContent = ""
   dextP.textContent = ""
   agiP.textContent = `AGI: ${menuObj.stats.agility}`
   charP.textContent = `CHA: ${menuObj.stats.charisma}`
   dextP.textContent = `DEX: ${menuObj.stats.dexterity}`
-  h2Name.textContent = menuObj.name
-  h3Race.textContent = `Race: ${menuObj.race}`
-  h3Class.textContent = `Class: ${menuObj.class}`
-  achH3.innerHTML = ""
+
+  editForm.dataset.id = menuObj.id
+
   fetch("http://localhost:3000/achievements")
-    .then(res => res.json())
-    .then(achArr => achArr.forEach(achObj => {
-      if(achObj.imageId === menuObj.id){
-        let achP = document.createElement('p')
-        achP.textContent = achObj.content
-        achH3.append(achP)
-      }
-    }))
+  .then(res => res.json())
+  .then(achArr => achArr.forEach(achObj => {
+    if(achObj.imageId === menuObj.id){
+      let achLi = document.createElement('li')
+      achLi.textContent = achObj.content
+      let achBtn = document.createElement('BUTTON')
+      achBtn.classList.add("achdel-btn")
+      achBtn.dataset.id = achObj.id
+      achBtn.textContent = "X"
+      achLi.appendChild(achBtn)
+      achUl.append(achLi)
+
+      achBtn.addEventListener('click', ev => {
+        fetch(`http://localhost:3000/achievements/${ev.target.dataset.id}`, {
+            method: "DELETE"
+          })
+          .then(res => res.json())
+          .then(achObj => {
+            ev.target.remove();
+            refreshPage();
+            console.log("removed");
+          })
+      })
+    }
+  }))
+  achForm.dataset.id = menuObj.id
+  descP.dataset.id = menuObj.id
+  achUl.innerHTML = ""
   descP.textContent = ''
   descP.textContent = menuObj.description
   hDesc.innerHTML = ''
@@ -150,7 +185,9 @@ newCharForm.addEventListener('submit', eve => {
 //submit new achv
 achForm.addEventListener('submit', ev => {
   ev.preventDefault()
+  
   let intAch = parseInt(ev.target.dataset.id)
+  
   fetch('http://localhost:3000/achievements', {
     method: 'POST',
     headers: {
@@ -165,9 +202,17 @@ achForm.addEventListener('submit', ev => {
   })
   .then(res => res.json())
   .then(achObj => {
-        achP.textContent = achObj.content
-        achH3.append(achP)
+        achLi.textContent = achObj.content
+        let achBtn = document.createElement('BUTTON')
+        achBtn.classList.add("achdel-btn")
+        achBtn.dataset.id = achObj.id
+        achBtn.textContent = "X"
+        achLi.appendChild(achBtn)
+        achUl.append(achLi)
   })
+
+  // fetch('http://localhost:3000/achievements', {})
+
 })
 //delete a char
 deleteBtn.addEventListener('click', e => {
@@ -187,5 +232,25 @@ function refreshPage(){
 }
 
 
+editForm.addEventListener('submit', e => {
+  e.preventDefault()
 
-
+  const editInput = e.target.edit.value
+  let patchedDes = {description: editInput}
+  
+  fetch(`http://localhost:3000/characters/${e.target.dataset.id}`, {
+    method: 'PATCH',
+    headers: {
+      'content-type': 'application/json',
+      'accept': 'application/json'
+    },
+    body: JSON.stringify(patchedDes)
+  })
+  .then(res => res.json())
+  .then(editObj => {
+    descP.innerHTML = ""
+    descP.textContent = editObj.description
+    console.log(editObj)
+    editForm.reset()
+  })
+})
