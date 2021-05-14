@@ -81,21 +81,6 @@
   ],
   "achievements": [
     {
-      "id": 1,
-      "imageId": 1,
-      "content": "DragonSeeker"
-    },
-    {
-      "id": 2,
-      "imageId": 1,
-      "content": "Saved a Town!"
-    },
-    {
-      "id": 3,
-      "imageId": 1,
-      "content": "Beer Drinking Contest Champion"
-    },
-    {
       "id": 4,
       "imageId": 2,
       "content": "Set Town on Fire"
@@ -106,19 +91,9 @@
       "content": "Aquired Bear Cub"
     },
     {
-      "id": 6,
-      "imageId": 2,
-      "content": "Stole a total of 2000 gold"
-    },
-    {
       "id": 7,
       "imageId": 3,
       "content": "Said 'huh?' 1000 times"
-    },
-    {
-      "id": 8,
-      "imageId": 3,
-      "content": "Clobbered 500 heads"
     },
     {
       "id": 9,
@@ -146,11 +121,6 @@
       "content": "Clan Chief"
     },
     {
-      "id": 14,
-      "imageId": 5,
-      "content": "Berserker"
-    },
-    {
       "id": 15,
       "imageId": 5,
       "content": "Bloodlust"
@@ -159,11 +129,6 @@
       "id": 17,
       "imageId": 6,
       "content": "Finish Him!"
-    },
-    {
-      "id": 19,
-      "imageId": 3,
-      "content": "Torched 100 Parties!"
     },
     {
       "id": 20,
@@ -179,6 +144,21 @@
       "id": 22,
       "imageId": 6,
       "content": "Three Successful Attacks"
+    },
+    {
+      "id": 23,
+      "imageId": 6,
+      "content": "Ate a child"
+    },
+    {
+      "id": 24,
+      "imageId": 1,
+      "content": "Saved a Town"
+    },
+    {
+      "id": 25,
+      "imageId": 1,
+      "content": "Beer Drinking Champ"
     }
   ]
 }
