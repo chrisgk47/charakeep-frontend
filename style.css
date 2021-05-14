@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('assets/fonts/piedra.ttf')  format('truetype'); /* Safari, Android, iOS */   
+}
+
+
 * {
   margin: 0;
   padding:0;
@@ -7,13 +13,11 @@
 }
 
 html { 
-  background: url("https://dndbackgrounds.net/wp-content/uploads/dnd-5e-backgrounds-1.jpg") no-repeat center center fixed; 
+  background: url("assets/images/Old_paper_05.jpeg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: auto;
-  height: auto;
   
 }
 
@@ -35,6 +39,25 @@ header {
   color: black;
   /* background-color: transparent; */
   text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+}
+
+.charakeep {
+  /* padding: 0.5rem;
+  width: 100%;
+  color: black;
+  /* background-color: transparent; */
+  /* text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86); */ 
+
+width: 600px;
+height: 275px;
+left: 133px;
+top: 100px;
+font-family: 'MyWebFont';
+font-size: 72px;
+line-height: 125px;
+letter-spacing: 0.20em;
+color: #DFE0C3;
+text-shadow: 10px 10px 10px rgba(16, 13, 45, 0.75);
 }
 
 .container {
@@ -182,11 +205,10 @@ header {
     border: 2px solid black;
     background: url('assets/images/card_finished-01.png') 0 0 no-repeat;
     background-size: cover;
-    opacity: 0.3px;
     width: 630px;
     height: 850px;
-    block-size: fit-content;
-  
+    /* block-size: fit-content; */
+    margin: 50px;
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     transform: rotateY(180deg);
     word-wrap: break-word;
@@ -205,11 +227,12 @@ div.characters {
   border-color:rgba(214, 0, 0, 0.86) */
   /* opacity: 0.2px; */
 position: absolute;
+-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 left: 173px;
 top: 205px;
 border: 1px solid #000000;
 border-radius: 20%;
-
 }
 
 .name {
@@ -218,6 +241,8 @@ border-radius: 20%;
   top: 100px;
   text-align: center;
   font-size: 50px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .race {
@@ -226,6 +251,8 @@ border-radius: 20%;
   top: 550px;
   text-align: center;
   font-size: 25px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .class {
@@ -234,6 +261,8 @@ border-radius: 20%;
   top: 550px;
   text-align: center;
   font-size: 25px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 
 }
 
@@ -243,6 +272,8 @@ border-radius: 20%;
   top: 600px;
   text-align: center;
   font-size: 25px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .agi {
@@ -251,6 +282,8 @@ border-radius: 20%;
   top: 650px;
   text-align: center;
   font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .cha {
@@ -259,6 +292,8 @@ border-radius: 20%;
   top: 685px;
   text-align: center;
   font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .dex {
@@ -267,6 +302,8 @@ border-radius: 20%;
   top: 720px;
   text-align: center;
   font-size: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .description {
@@ -283,7 +320,7 @@ border-radius: 20%;
 }
 .edit-form {
     position: relative;
-    height: 50%;
+    height: 20%;
     padding: 0px;
     margin: 0px;
     line-height: 60%;
@@ -437,10 +474,11 @@ video {
   opacity: 0.4;
   position: absolute;
   left: 30px;
+
   /* right: 10px; */
   margin: 0px;
   /* bottom: 35px; */
-  top: 0px;
+  top: 150px;
 }
 
 u {
