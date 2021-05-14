@@ -110,16 +110,16 @@ header {
 .char-card {
   display: inline-block;
   background-color: transparent;
-  width: 400px;
-  height: 450px;
-  perspective: 1000px;
-  border-radius: 50px;
+  width: 630px;
+  height: 850px; */ */
+  /* perspective: 1000px; */
+  /* border-radius: 50px; */
   /* opacity: .8; */
 }
 .char-card-front {
   position: relative;
-  width: auto;
-  height: auto;
+  width: 630px;
+  height: 850px;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -136,8 +136,8 @@ header {
 
 .characters, .char-card-back {
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 630px;
+  height: 850px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 50px;
@@ -146,32 +146,47 @@ header {
 
 .characters {
   /* background-color:  #a58859;  */
-  border: 2px solid black;
+  /* border: 2px solid black;
   background: url('https://64.media.tumblr.com/ecdae026a020187827160c640780adb5/tumblr_ocs6lhjx071vu5c8fo1_1280.jpg') 0 0 no-repeat;
   background-size: cover;
-  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86); */
   /* outline-style: groove; */
-  border-color: black;
-  border-radius: 50px;
+  /* border-color: black;
+  border-radius: 50px; */
+  position: absolute;
+  width: 650px;
+  height: 850px;
+  left: 0px;
+  top: 0px;
+ 
+  background-image: url(assets/images/card_finished-01.png);
+  background-size: contain;
+
+
 }
+
+
 
 .char-card-back {
   /* background-color: rgb(212, 162, 139);; */
   text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
   transform: rotateY(180deg);
+  width: 630px;
+  height: 850px;
+  
 }
 
 .char-card-back {
     /* background-color:  #a58859;  */
     position: absolute;
     border: 2px solid black;
-    background: url('assets/images/card.jpg') 0 0 no-repeat;
+    background: url('assets/images/card_finished-01.png') 0 0 no-repeat;
     background-size: cover;
     opacity: 0.3px;
-    width: auto;
-    height: auto;
+    width: 630px;
+    height: 850px;
     block-size: fit-content;
-    overflow-wrap: fit;
+  
     text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
     transform: rotateY(180deg);
     word-wrap: break-word;
@@ -183,13 +198,75 @@ div.characters {
 }
 
 .detail-image {
-  /* float: left; */
-  height: 250px;
+  /* float: none; */
+  /* height: 250px;
   width: 230px;
   outline-style: groove;
-  border-color:rgba(214, 0, 0, 0.86)
+  border-color:rgba(214, 0, 0, 0.86) */
   /* opacity: 0.2px; */
-  
+position: absolute;
+left: 173px;
+top: 205px;
+border: 1px solid #000000;
+border-radius: 20%;
+
+}
+
+.name {
+  position: absolute;
+  left: 130px;
+  top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.race {
+  position: absolute;
+  left: 100px;
+  top: 550px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.class {
+  position: absolute;
+  left: 400px;
+  top: 550px;
+  text-align: center;
+  font-size: 25px;
+
+}
+
+.stat-title {
+  position: absolute;
+  left: 295px;
+  top: 600px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.agi {
+  position: absolute;
+  left: 295px;
+  top: 650px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.cha {
+  position: absolute;
+  left: 295px;
+  top: 685px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.dex {
+  position: absolute;
+  left: 295px;
+  top: 720px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .description {
