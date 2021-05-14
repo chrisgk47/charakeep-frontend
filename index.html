@@ -13,13 +13,16 @@
         <video defer id="myVid" autoplay>
             <source src="assets/images/logovid.mp4">
         </video>
+        <script>
+            document.getElementById('myVid').volume = 0.2
+        </script>
 
         <audio src="assets/images/wizard.mp3" id="audio" allow="autoplay" loop="loop" controls></audio>
         <script>
             
             setTimeout (function() {
                 let myAudio = document.getElementById("audio")
-                myAudio.volume = 0.4;
+                myAudio.volume = 0.2;
                 myAudio.play();
                 console.log('audio started');
             }, 5000)

@@ -75,7 +75,7 @@ function firstCard(charArray){
   fetch("http://localhost:3000/achievements")
     .then(res => res.json())
     .then(achArr => achArr.forEach(achObj => {
-      if(achObj.imageId == firstC.id){
+      if(achObj.characterId == firstC.id){
         let achLi = document.createElement('li')
         achLi.textContent = achObj.content
         let achBtn = document.createElement('BUTTON')
@@ -115,7 +115,7 @@ function detailCard(menuObj){
   fetch("http://localhost:3000/achievements")
   .then(res => res.json())
   .then(achArr => achArr.forEach(achObj => {
-    if(achObj.imageId === menuObj.id){
+    if(achObj.characterId === menuObj.id){
       let achLi = document.createElement('li')
       achLi.textContent = achObj.content
       let achBtn = document.createElement('BUTTON')
@@ -192,7 +192,7 @@ achForm.addEventListener('submit', ev => {
     },
     body: JSON.stringify({
       id: '',
-      imageId: intAch,
+      characterId: intAch,
       content: ev.target.achievement.value
     })
   })

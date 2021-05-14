@@ -77,108 +77,121 @@
         "charisma": 16,
         "dexterity": 6
       }
+    },
+    {
+      "id": 7,
+      "name": "dasd",
+      "race": "asdas",
+      "class": "asdasd",
+      "image": "https://img-new.cgtrader.com/items/2073599/12b690bc3b/sid-phillips-rigged-3d-model-rigged-fbx-blend.jpg",
+      "description": "asd",
+      "stats": {
+        "agility": 12,
+        "charisma": 1,
+        "dexterity": 9
+      }
     }
   ],
   "achievements": [
     {
       "id": 1,
-      "imageId": 1,
+      "characterId": 1,
       "content": "DragonSeeker"
     },
     {
       "id": 2,
-      "imageId": 1,
+      "characterId": 1,
       "content": "Saved a Town!"
     },
     {
       "id": 3,
-      "imageId": 1,
+      "characterId": 1,
       "content": "Beer Drinking Contest Champion"
     },
     {
       "id": 4,
-      "imageId": 2,
+      "characterId": 2,
       "content": "Set Town on Fire"
     },
     {
       "id": 5,
-      "imageId": 2,
+      "characterId": 2,
       "content": "Aquired Bear Cub"
     },
     {
       "id": 6,
-      "imageId": 2,
+      "characterId": 2,
       "content": "Stole a total of 2000 gold"
     },
     {
       "id": 7,
-      "imageId": 3,
+      "characterId": 3,
       "content": "Said 'huh?' 1000 times"
     },
     {
       "id": 8,
-      "imageId": 3,
+      "characterId": 3,
       "content": "Clobbered 500 heads"
     },
     {
       "id": 9,
-      "imageId": 3,
+      "characterId": 3,
       "content": "Good Doggy"
     },
     {
       "id": 10,
-      "imageId": 4,
+      "characterId": 4,
       "content": "Shed Skin"
     },
     {
       "id": 11,
-      "imageId": 4,
+      "characterId": 4,
       "content": "Poison Resist"
     },
     {
       "id": 12,
-      "imageId": 4,
+      "characterId": 4,
       "content": "Scale Upgrade"
     },
     {
       "id": 13,
-      "imageId": 5,
+      "characterId": 5,
       "content": "Clan Chief"
     },
     {
       "id": 14,
-      "imageId": 5,
+      "characterId": 5,
       "content": "Berserker"
     },
     {
       "id": 15,
-      "imageId": 5,
+      "characterId": 5,
       "content": "Bloodlust"
     },
     {
       "id": 17,
-      "imageId": 6,
+      "characterId": 6,
       "content": "Finish Him!"
     },
     {
       "id": 19,
-      "imageId": 3,
+      "characterId": 3,
       "content": "Torched 100 Parties!"
     },
     {
-      "id": 20,
-      "imageId": 4,
-      "content": "Shredded"
-    },
-    {
       "id": 21,
-      "imageId": 6,
+      "characterId": 6,
       "content": "Lucky Roll"
     },
     {
       "id": 22,
-      "imageId": 6,
+      "characterId": 6,
       "content": "Three Successful Attacks"
+    },
+    {
+      "id": 23,
+      "characterId": 7,
+      "content": "asdas"
     }
   ]
 }
