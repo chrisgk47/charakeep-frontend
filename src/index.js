@@ -130,11 +130,7 @@ function detailCard(menuObj){
             method: "DELETE"
           })
           .then(res => res.json())
-          .then(achObj => {
-            ev.target.remove();
-            refreshPage();
-            console.log("removed");
-          })
+          .then(ev.target.parentElement.remove())
       })
     }
   }))
@@ -202,13 +198,15 @@ achForm.addEventListener('submit', ev => {
   })
   .then(res => res.json())
   .then(achObj => {
-        achLi.textContent = achObj.content
+        let newLi = document.createElement('li')
+        newLi.textContent = achObj.content
         let achBtn = document.createElement('BUTTON')
         achBtn.classList.add("achdel-btn")
         achBtn.dataset.id = achObj.id
         achBtn.textContent = "X"
-        achLi.appendChild(achBtn)
-        achUl.append(achLi)
+        newLi.appendChild(achBtn)
+        achUl.append(newLi)
+        achForm.reload()
   })
 
   // fetch('http://localhost:3000/achievements', {})

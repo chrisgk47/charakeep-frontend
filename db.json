@@ -169,6 +169,16 @@
       "id": 20,
       "imageId": 4,
       "content": "Shredded"
+    },
+    {
+      "id": 21,
+      "imageId": 6,
+      "content": "Lucky Roll"
+    },
+    {
+      "id": 22,
+      "imageId": 6,
+      "content": "Three Successful Attacks"
     }
   ]
 }
