@@ -112,7 +112,7 @@ header {
   display: inline-block;
   background-color: transparent;
   width: 400px;
-  height: 450px;
+  height: 500px;
   perspective: 1000px;
   border-radius: 50px;
   /* opacity: .8; */
@@ -260,34 +260,13 @@ p {
   padding: -10px;
 }
 
-/* .hide-form {
-  position: absolute;
-  background-color: transparent;
-  opacity: 0.5;
-  border: black;
-  border-radius: 5px;
-  color:rgba(214, 0, 0, 0.86);
-  height: 2rem;
-  width: max-content;
-  text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
-  font-size: 18px;
-  justify-self: left;
-  left: 0px;
-  right: 10px;
-  margin: 10px;
-  bottom: 35px;
-  /* bottom: -50px; */
-} */
-
 button {
   position: flex;
-  background-color: #3a3939;
-  opacity: 0.4;
-  border: black;
-  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50px;
   height: 2rem;
   width: max-content;
-  color:rgba(214, 0, 0, 0.86);
   text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
   display: inline-block;
   font-size: 18px;
@@ -371,6 +350,7 @@ u {
   font-size: 25px;
   position: center;
 }
+
 
 
 

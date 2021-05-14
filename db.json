@@ -77,19 +77,6 @@
         "charisma": 16,
         "dexterity": 6
       }
-    },
-    {
-      "id": 7,
-      "name": "dasd",
-      "race": "asdas",
-      "class": "asdasd",
-      "image": "https://img-new.cgtrader.com/items/2073599/12b690bc3b/sid-phillips-rigged-3d-model-rigged-fbx-blend.jpg",
-      "description": "asd",
-      "stats": {
-        "agility": 12,
-        "charisma": 1,
-        "dexterity": 9
-      }
     }
   ],
   "achievements": [
@@ -187,11 +174,6 @@
       "id": 22,
       "characterId": 6,
       "content": "Three Successful Attacks"
-    },
-    {
-      "id": 23,
-      "characterId": 7,
-      "content": "asdas"
     }
   ]
 }

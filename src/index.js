@@ -89,11 +89,12 @@ function firstCard(charArray){
 }
 //load char card on click from menu
 charMenu.addEventListener('click', event => {
+  if(event.target.matches('img')){
     fetch(`http://localhost:3000/characters/${event.target.dataset.id}`)
     .then(res => res.json())
     .then(menuObj => detailCard(menuObj))
   }
-)
+  })
 //define data for cards from db
 function detailCard(menuObj){
   //front card
